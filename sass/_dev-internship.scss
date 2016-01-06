@@ -1,0 +1,27 @@
+/* LANDING PAGE LAYOUT */
+
+header, section{
+	padding: 4em 10vw;
+}
+
+header{
+	background: $nkblue;
+}
+
+section{
+
+	+ section{
+		border-top: 1px dashed $nkblue;
+	}
+
+}
+
+footer{
+	padding: 2em 10vw;
+	background: $gray;
+	
+	p{ 
+		color: $white;
+		font-size: .8em;
+	}
+}

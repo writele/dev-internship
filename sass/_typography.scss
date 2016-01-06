@@ -1,0 +1,56 @@
+/* TYPOGRAPHY */
+
+h1, h2, h3, p, li{
+	font-family: "Maison Neue", sans-serif;
+	font-weight: 100;
+}
+
+h1{
+	font-size: 2em;
+	color: $white;
+	font-weight: 400;
+}
+
+h2{
+	font-size: 1.5em;
+	margin-bottom: 2em;
+	color: $nkblue;
+	font-weight: 400;
+}
+
+p{
+	line-height: 1.4em;
+	color: $black;
+	max-width: 800px;
+
+	+ p{
+		margin-top: 2em;
+	}
+}
+
+a{
+	color: $nkblue;
+	text-decoration: none;
+	border-bottom: 1px dashed $nkblue;
+}
+
+li{
+	line-height: 1.2em;
+	max-width: 800px;
+	
+	+ li{
+		margin-top: 1em;
+	}
+}
+
+ol li{ 
+	list-style: decimal;
+}
+
+em{
+	font-style: italic;
+}
+
+strong{
+	font-weight: bold;
+}

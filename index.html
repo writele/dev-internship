@@ -31,8 +31,17 @@
 
 			<ol>
 				<li>What do you hope to achieve through this internship?</li>
+
+					<p>I look forward to building real-world projects. I want to take my skills to the next level to become a great front-end developer. Whether it be through New Kind or another agency, I do hope to land a full-time Jr. Front-End Developer position afterwards.</p>
+
 				<li>Are there particular skills or technologies you'd like to learn or work with?</li>
+
+					<p>I'm fond of Javascript. It would be great to learn more about different frameworks. I believe in using whatever works best for a particular project, though, so I'm pretty open to learning anything.</p>
+
 				<li>This internship will be a hybrid of 20% in-person and 80% remote, do you think you'll work well without regular support and oversight?</li>
+
+					<p>As a research assistant, I designed and carried out independent research projects from start to finish. This required careful time management, as procrastination or carelessness could severely impact the quality and quantity of the data I collected. I am well-accustomed to working with limited support and oversight. I also understand there are times when it is important to ask questions and to consider the needs of your teammates. </p>
+
 			</ol>
 
 		</section>
@@ -42,8 +51,19 @@
 
 			<ol>
 				<li>Explain how design and development intersect. What role do you see a developer playing in the design process?</li>
+					<p>Design is an important component of any website. It's easy for design and development to blend, as the front-end developer is implementing the design. There are going to considerations that are better understood from a design standpoint than from a development perspective, and vice versa.</p>
+					<p>The role of the developer in the design process is likely going to depend on the needs of the team and project. For smaller teams, it probably makes sense for the developer and designer to collaborate more so than in large companies with separate departments.</p>
+					<p>From my perspective, the developer's main obligation is to give feedback on the feasibility of a design. If aspects of a design are going to cause problems in adhering to code standards and/or cross-browser compatibility, the developer should definitely mention this and suggest alternatives.</p>
+					<p>Design isn't always a linear process, in which the design is completely created up front and then the developer implements it. I can see how the design could end up changing due to communication between the designer and developer.</p>
+					<p>Ultimately, I think most final decision-making regarding the design should be left up to the designer. How much feedback the developer should give depends on the nature of the team and project.</p>
 				<li>Describe how grids are useful, and how you generally go about using them, or implementing them.</li>
+					<p>Grids provide a reusable CSS structure for implementing the layout of elements on a webpage. In a grid system, the page is divided into columns contained in rows. By attaching a column class to an html element (usually a div), you can specify how much that element spans across the page. For instance, in a 12-column grid, a class such as "12-col" would indicate that a div should span across the entire row. A class of "4-col" would indicate that the div should span across ⅓ of the page.</p>
+					<p>Rows can be nested within rows to provide further containers for columns. For example, you could have a row with two 6-column divs. If you want to evenly display two content boxes within one of those divs, you would add another row with two 6-column divs.</p>
+					<p>Grids make positioning elements on a page fast and easy. Additionally, grids are great for responsive design. By utilizing percentages on columns, the columns will grow larger or smaller depending on screen size.</p>
 				<li>Talk a little bit about pattern libraries and visual systems. What are they and how are they useful? Have you used them before?</li>
+					<p>A pattern library is a collection of design patterns. These tend to include documentation for page elements such as navigation, buttons, the grid layout, tables, lists, and forms. A pattern library may contain code snippets and accompanying CSS files. Sometimes simple Javascript widgets, such as a drop-down menu or accordion, are also featured.</p>
+					<p>These patterns can be used to create consistent user experience throughout a large website. Having reusable patterns that adhere to certain code standards makes websites easier to maintain. Creating a pattern library can allow you to test your code up front, to ensure that it works across browsers and meets accessibility standards. It also prevents members of large teams from recreating something that's already been done, which cuts down on costs.</p>
+					<p>The closest I've gotten to using pattern libraries is through utilizing front-end frameworks such as Bootstrap and Foundation. These aren't exactly pattern libraries, since they were designed for general use rather than to meet the specific needs of a particular website. I would look forward to the opportunity to use and contribute to a pattern library, as they look like great tools.</p>
 			</ol>
 
 		</section>
@@ -53,13 +73,39 @@
 
 			<ol>
 				<li>Describe your experience developing for Wordpress. Go into detail, please.</li>
+					<p>I am very comfortable using Wordpress, although I have not had a lot of experience developing for it. All of my Wordpress websites have utilized child themes so that I could safely customize the CSS without worrying about theme updates. I develop locally using MAMP before launching live Wordpress websites.</p>
+
+					<p>For one client, I had to make changes to an already existing website that used a Genesis theme. To reduce some of the website bloat, I searched through the files to discover that a photo gallery plugin I had removed still kept a large number of images. Through removing these images, optimizing other images, and installing a caching plugin, I was able to considerably speed up the page load time.</p>
+
+					<p>I've built three different websites using the X theme in order to quickly launch websites for a few clients. This theme provides a WYSIWIG editor, but has a pretty steep learning curve. It allowed me a lot of control over the design and let me produce professional, quality websites in a short period of time. I applied child themes to these websites, as well.</p>
+
+					<p>For my own website, elepalmer.com, I used Advanced Custom Post Types and Custom Post Type UI to create my portfolio. This required building out page-portfolio.php and single-portfolio.php for my website's child theme.</p>
 				<li>Is this your first time using version control? If not, tell us about other times you've used it, and which technologies.</li>
+					<p>I have used Git for almost all of my projects, with the exception of Wordpress websites. I try to remember to commit after implementing important features to any project. Git really came in handy when I was creating a resource guide using AJAX to call a JSON file. I realized I had just been attaching table rows to the page instead of separate tables for each category, resulting in one continuous table for all my information. Fortunately, I was able to just "checkout" to my last commit.</p>
 				<li>Do you have experience with CSS pre-processors? Which one do you prefer and why?</li>
+
 				<li>What is your comfort level with responsive design? Have you done any mobile-first projects before? Tell us about what you know.</li>
+					<p>I try to keep responsive design in mind for every project. At its simplest, I've made sure my websites used percentage-based layouts. For most projects, I've implemented media queries and break points so that the content spread out at larger screen sizes, but every div was contained to its own row on mobile devices.</p>
+
+					<p>Images are another important consideration in responsive design. Displaying the same large images for all screen sizes adds unnecessarily to load time. For PhoebeSnowTribute.com, my client provided several images they wanted featured. I used PictureFill.js so that the images displayed would differ depending on the screen size.</p>
 				<li>What books or blogs do you like to read, people you follow on twitter, etc. to keep up with the latest trends in front-end development?</li>
+					<p>I'm subscribed to a couple of newsletters, including HTML5 Weekly, Javascript Weekly, Ruby Weekly, and UX Design Weekly. I also follow A List Apart, Smashing Magazine, CSS Tricks, Toptal Blog, and Nicholas Z. Zakas' blog.</p>
 				<li>What tools, frameworks, etc. do you enjoy using? Tell us why.</li>
+					<p>Sublime Text is my text editor of choice. The different text colors make code easy to read, and the Emmet plugin provides some great shortcuts. I've been using Skeleton as my grid framework because it provides just the right amount of foundation I need for simple websites. Since I haven't contribute to any large projects, I haven't needed to branch out yet into more advanced tools.</p>
+
+					<p>Overall, I think it's important to choose whatever tool or framework is best for the job. I would look forward to exploring more tools in this internship.</p>
 				<li>Explain how HTML, CSS, and JS interact - what is each layer responsible for?</li>
+					<p>HTML provides content and structure to a webpage. Ideally, it allows everyone, including older browsers and speech-readers, to easily access your content and navigate through your website. This is the first layer required for a website to provide functionality.</p>
+
+					<p>CSS is the next layer, which allows you to add visual style to a webpage.</p>
+
+					<p>Finally, Javascript adds in a layer of behavior, so that users with Javascript enabled can interact with elements on the page.</p>
 				<li>Progressive enhancement or graceful degredation? Choose your side.</li>
+					<p>Progressive enhancement and graceful degradation are two different methods of ensuring your websites are accessible to all users. In my opinion, progressive enhancement is the better strategy because it provides a better user experience and makes projects easier to maintain in the long run.</p>
+
+					<p>Through progressive enhancement, websites are built with a strong foundation up-front that focuses on content rather than presentation. Graceful degradation focuses on complex presentation that makes allowances for users with older technology. A feature that requires Javascript might present an error message for users who have Javascript disabled. In a website built on progressive enhancement, however, the option would not be shown at all to users with Javascript, nor would the option be necessary to provide a positive user experience.</p>
+
+					<p>The advantage of progressive enhancement is that in the initial product, you have already provided a website that will be pleasant for all users. Newer browsers may have additional features, but this will be "icing on the cake", so to speak. Although this requires more planning up front, there won't be any need to alter the original code when new technologies are released. It also ensures that there is one project that is kept up to date, rather than different versions of the same product built for various scenarios. With progressive enhancement, a team can "release early, release often" and focus on building enhancements instead of fixing edge cases.</p>
 			</ol>
 
 		</section>

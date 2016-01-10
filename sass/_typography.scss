@@ -1,14 +1,18 @@
 /* TYPOGRAPHY */
 
-h1, h2, h3, p, li{
-	font-family: "Maison Neue", sans-serif;
-	font-weight: 100;
+h1, h2, h3, li{
+	font-family: "Roboto Slab", serif;
+}
+
+p{
+	font-family: "Open Sans", sans-serif;
 }
 
 h1{
-	font-size: 2em;
+	font-size: 1.2em;
 	color: $white;
 	font-weight: 400;
+	padding-top: .5em;
 }
 
 h2{
@@ -22,21 +26,36 @@ p{
 	line-height: 1.4em;
 	color: $black;
 	max-width: 800px;
-
-	+ p{
-		margin-top: 2em;
-	}
+	margin: 1em 0;
+}
+@mixin link-underline($size, $style, $color){
+	border-bottom: $size $style $color;
 }
 
 a{
 	color: $nkblue;
 	text-decoration: none;
-	border-bottom: 1px dashed $nkblue;
+	@include link-underline(1px, dashed, $nkblue);
+}
+
+nav{
+	ul{
+		li{
+			a {
+			color: $black;
+			font-size: .9em;
+			@include link-underline(1px, dashed, $black);
+				&:hover{
+				color: $white;
+				border-bottom-color: $white;
+				}
+			}
+		}
+	}
 }
 
 li{
-	line-height: 1.2em;
-	max-width: 800px;
+	font-size: $larger-font;
 	
 	+ li{
 		margin-top: 1em;

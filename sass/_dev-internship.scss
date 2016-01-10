@@ -1,20 +1,93 @@
 /* LANDING PAGE LAYOUT */
 
-header, section{
+@mixin box-sizing($box-model){
+  -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model; 
+          box-sizing: $box-model;
+}
+
+*,
+*:after,
+*:before{
+  @include box-sizing(border-box);
+}
+
+section{
 	padding: 4em 10vw;
 }
 
 header{
 	background: $nkblue;
+	top: 0;
+	position: fixed;
+	height: $header-height;
+	width: 100%;
+	+ section {
+	margin-top: $header-height;
+	}
 }
 
-section{
+nav{
+	ul{
+		li{
+			display: inline-block;
+			padding: 0 .2em;
+		}
+	}
+}
+
+header, nav {
+	text-align: center;
+}
+
+.anchor{
+	display: block;
+	height: $header-height;
+	margin-top: -$header-height;
+	visibility: hidden;
+}
+
+span{
 
 	+ section{
 		border-top: 1px dashed $nkblue;
 	}
 
 }
+
+@mixin box-style($background, $font-color, $max-width: 800px){
+	background: $background;
+	font-color: $font-color;
+	max-width: $max-width;
+}
+
+@mixin box-margin($margin: 1em){
+	margin: $margin;
+}
+
+@mixin box-padding($padding: 1em){
+	padding: $padding;
+}
+
+ol li {
+	@include box-style($light-blue, $black);
+	@include box-margin;
+	margin-bottom: 0;
+	@include box-padding;
+	border: 8px solid $dark-blue;
+}
+
+.answer{
+	@include box-style($white, $black);	
+	@include box-margin($larger-font);
+	margin-top: 0;
+	@include box-padding;
+	border: 5px solid $dark-blue;
+	border-top: 0;
+}
+
+
+
 
 footer{
 	padding: 2em 10vw;

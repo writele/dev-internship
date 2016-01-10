@@ -2,6 +2,8 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 /* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -70,19 +72,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* VARIABLES */
 /* TYPOGRAPHY */
 /* line 3, ../sass/_typography.scss */
-h1, h2, h3, p, li {
-  font-family: "Maison Neue", sans-serif;
-  font-weight: 100;
+h1, h2, h3, li {
+  font-family: "Roboto Slab", serif;
 }
 
-/* line 8, ../sass/_typography.scss */
+/* line 7, ../sass/_typography.scss */
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 11, ../sass/_typography.scss */
 h1 {
-  font-size: 2em;
+  font-size: 1.2em;
   color: #ffffff;
   font-weight: 400;
+  padding-top: .5em;
 }
 
-/* line 14, ../sass/_typography.scss */
+/* line 18, ../sass/_typography.scss */
 h2 {
   font-size: 1.5em;
   margin-bottom: 2em;
@@ -90,72 +97,183 @@ h2 {
   font-weight: 400;
 }
 
-/* line 21, ../sass/_typography.scss */
+/* line 25, ../sass/_typography.scss */
 p {
   line-height: 1.4em;
   color: #111111;
   max-width: 800px;
-}
-/* line 26, ../sass/_typography.scss */
-p + p {
-  margin-top: 2em;
+  margin: 1em 0;
 }
 
-/* line 31, ../sass/_typography.scss */
+/* line 35, ../sass/_typography.scss */
 a {
   color: #00b3e3;
   text-decoration: none;
   border-bottom: 1px dashed #00b3e3;
 }
 
-/* line 37, ../sass/_typography.scss */
-li {
-  line-height: 1.2em;
-  max-width: 800px;
+/* line 44, ../sass/_typography.scss */
+nav ul li a {
+  color: #111111;
+  font-size: .9em;
+  border-bottom: 1px dashed #111111;
 }
-/* line 41, ../sass/_typography.scss */
+/* line 48, ../sass/_typography.scss */
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* line 57, ../sass/_typography.scss */
+li {
+  font-size: 1.2em;
+}
+/* line 60, ../sass/_typography.scss */
 li + li {
   margin-top: 1em;
 }
 
-/* line 46, ../sass/_typography.scss */
+/* line 65, ../sass/_typography.scss */
 ol li {
   list-style: decimal;
 }
 
-/* line 50, ../sass/_typography.scss */
+/* line 69, ../sass/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 54, ../sass/_typography.scss */
+/* line 73, ../sass/_typography.scss */
 strong {
   font-weight: bold;
 }
 
 /* LANDING PAGE LAYOUT */
-/* line 3, ../sass/_dev-internship.scss */
-header, section {
+/* line 9, ../sass/_dev-internship.scss */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 15, ../sass/_dev-internship.scss */
+section {
   padding: 4em 10vw;
 }
 
-/* line 7, ../sass/_dev-internship.scss */
+/* line 19, ../sass/_dev-internship.scss */
 header {
   background: #00b3e3;
+  top: 0;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+}
+/* line 25, ../sass/_dev-internship.scss */
+header + section {
+  margin-top: 100px;
 }
 
-/* line 13, ../sass/_dev-internship.scss */
-section + section {
+/* line 32, ../sass/_dev-internship.scss */
+nav ul li {
+  display: inline-block;
+  padding: 0 .2em;
+}
+
+/* line 39, ../sass/_dev-internship.scss */
+header, nav {
+  text-align: center;
+}
+
+/* line 43, ../sass/_dev-internship.scss */
+.anchor {
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
+
+/* line 52, ../sass/_dev-internship.scss */
+span + section {
   border-top: 1px dashed #00b3e3;
 }
 
-/* line 19, ../sass/_dev-internship.scss */
+/* line 72, ../sass/_dev-internship.scss */
+ol li {
+  background: #C4EFFB;
+  font-color: #111111;
+  max-width: 800px;
+  margin: 1em;
+  margin-bottom: 0;
+  padding: 1em;
+  border: 8px solid #01BBEF;
+}
+
+/* line 80, ../sass/_dev-internship.scss */
+.answer {
+  background: #ffffff;
+  font-color: #111111;
+  max-width: 800px;
+  margin: 1.2em;
+  margin-top: 0;
+  padding: 1em;
+  border: 5px solid #01BBEF;
+  border-top: 0;
+}
+
+/* line 92, ../sass/_dev-internship.scss */
 footer {
   padding: 2em 10vw;
   background: #666666;
 }
-/* line 23, ../sass/_dev-internship.scss */
+/* line 96, ../sass/_dev-internship.scss */
 footer p {
   color: #ffffff;
   font-size: .8em;
+}
+
+@media (min-width: 650px) {
+  /* line 2, ../sass/_media-queries.scss */
+  h1 {
+    font-size: 1.7em;
+  }
+
+  /* line 9, ../sass/_media-queries.scss */
+  nav ul li {
+    padding: 0 1em;
+  }
+  /* line 11, ../sass/_media-queries.scss */
+  nav ul li a {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1300px) {
+  /* line 21, ../sass/_media-queries.scss */
+  h1 {
+    float: left;
+    padding-left: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* line 28, ../sass/_media-queries.scss */
+  header {
+    height: 75px;
+  }
+  /* line 30, ../sass/_media-queries.scss */
+  header nav {
+    float: right;
+  }
+  /* line 33, ../sass/_media-queries.scss */
+  header nav ul li {
+    padding-top: 8px;
+  }
+
+  /* line 40, ../sass/_media-queries.scss */
+  .anchor {
+    height: 75px;
+    margin-top: -75px;
+  }
 }

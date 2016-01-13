@@ -20,6 +20,7 @@ header{
 	background: $nkblue;
 	top: 0;
 	position: fixed;
+	z-index: 1;
 	height: $header-height;
 	width: 100%;
 	+ section {
@@ -55,6 +56,8 @@ span{
 
 }
 
+/* CONTENT BOX STYLES */
+
 @mixin box-style($background, $font-color, $max-width: 800px){
 	background: $background;
 	font-color: $font-color;
@@ -86,8 +89,36 @@ ol li {
 	border-top: 0;
 }
 
+#instructions, #extra {
+	@extend .answer;
+	border-top: 5px solid $dark-blue;	
+	margin: 0 0 1em 0;
+}
 
+.contact{
+ li{
+		a{
+	  display: inline-block;
+	  width: 25px;
+	  height: 25px;
+	  text-indent: -9999px;
+	  border-bottom: 0;
+	  }
+  }
+}
 
+.portfolio {
+	li{
+		text-align: center;
+		a{
+			img{
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
 
 footer{
 	padding: 2em 10vw;
@@ -97,4 +128,20 @@ footer{
 		color: $white;
 		font-size: .8em;
 	}
+}
+
+/* BUTTONS */
+
+@mixin btn-style($btn-color:$dark-blue, $font-color:$white, $border-color:$medium-blue) {
+	background-color: $btn-color;
+	color: $font-color;
+	box-shadow: inset 0 0 10px $border-color;
+	border-radius: 20px;
+}
+
+button{
+	@include btn-style;
+		&:hover, &:active{
+			background-color: lighten($dark-blue, 5);
+		}
 }

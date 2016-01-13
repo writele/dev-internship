@@ -4,15 +4,19 @@ h1, h2, h3, li{
 	font-family: "Roboto Slab", serif;
 }
 
-p{
+p, button{
 	font-family: "Open Sans", sans-serif;
 }
 
-h1{
+h1 a{
+	display: inline-block;
 	font-size: 1.2em;
 	color: $white;
 	font-weight: 400;
 	padding-top: .5em;
+		&:hover{
+		border-bottom: 0;
+		}
 }
 
 h2{
@@ -22,20 +26,35 @@ h2{
 	font-weight: 400;
 }
 
+h3{
+	font-size: 1.2em;
+}
+
 p{
 	line-height: 1.4em;
 	color: $black;
 	max-width: 800px;
 	margin: 1em 0;
+	font-size: 1.1em;
 }
-@mixin link-underline($size, $style, $color){
+
+@mixin link-underline($color, $size:1px, $style:dashed){
 	border-bottom: $size $style $color;
 }
 
 a{
 	color: $nkblue;
 	text-decoration: none;
-	@include link-underline(1px, dashed, $nkblue);
+	@include link-underline($color: $nkblue);
+		&:hover{
+		color: $black;
+		@include link-underline($color: $black);
+		}
+}
+
+button{
+	padding:1em;
+	font-size: 1em;
 }
 
 nav{
@@ -66,10 +85,18 @@ ol li{
 	list-style: decimal;
 }
 
+.portfolio{
+	li{
+		a{
+		border-bottom: 0;
+		}
+	}
+}
+
 em{
 	font-style: italic;
 }
 
 strong{
-	font-weight: bold;
+	font-weight: 700;
 }

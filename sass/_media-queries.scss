@@ -1,12 +1,11 @@
-@media (min-width: 650px) {
+@media (min-width: 750px){
   h1{
     font-size: 1.7em;
   }
 
-
   nav{
-    ul{
-      li{
+    ul {
+      li {
         padding: 0 1em;
         a {
         font-size: 1em;
@@ -17,30 +16,51 @@
 
 }
 
-@media (min-width: 1300px) {
-  h1 {
-  float: left;
-  padding-left: 1em;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  }
+  @media (min-width: 1400px){
+    h1 a {
+    float: left;
+    padding-left: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
 
-header {
-  height: $desktop-header-height;
-  nav {
-    float: right;
-    ul {
-      li {
-        padding-top: 8px;
+  header{
+    height: $desktop-header-height;
+    nav {
+      float: right;
+      ul {
+        li {
+          padding-top: 8px;
+        }
       }
     }
   }
-}
 
-.anchor{
-  height: $desktop-header-height;
-  margin-top: -$desktop-header-height;
-}
+  .anchor{
+    height: $desktop-header-height;
+    margin-top: -$desktop-header-height;
+  }
+
+  .portfolio {
+    li{ 
+      float: left;
+      padding: .5em;
+      margin-left: 50px;
+      }
+    }
+
+  .portfolio{
+    +p{
+    clear: both;
+    padding-top: 1em;
+    }
+  }
+
+  #extra:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
 
 
 }

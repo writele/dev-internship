@@ -9,7 +9,7 @@
 	<body>
 
 		<header>
-			<h1>New Kind Developer Internship Questionnaire</h1>
+			<h1><a href="#">New Kind Developer Internship Questionnaire</a></h1>
 			<nav>
 				<ul>
 					<li><a href="#general">General Questions<a></li>
@@ -23,6 +23,7 @@
 
 			<h2>Instructions</h2>
 
+			<div id="instructions">
 			<p>Hi there! I'm glad you're interested in our developer internship here at New Kind. It wasn't <em>that</em> long ago that I was in your shoes, eager to break into the web-world.</p>
 
 			<p>It's my goal for our intern to learn a ton of practical, real-world skills and knowledge, so that you're ready to step right into a developer role either here at New Kind, or wherever it is you'd like to go in the world.</p>
@@ -30,7 +31,10 @@
 			<p>Let's start learning now! I'm going to need you to go fork this repo on github to submit your response. Don't know how to do that yet? That's ok! This industry is full of learning every day, and your ability and willingness to pick up new skills is paramount in what we're looking for. Get your hands dirty! <a href="https://help.github.com/articles/fork-a-repo/">Here's a good place to start</a>.</p>
 
 			<p><strong>To submit:</strong> Just zip up a copy of your code and email it to <a href="mailto:tech@newkind.com">tech@newkind.com</a>, or publish it wherever you like and send us a link. Please feel free to be as creative as you'd like with what you submit. Don't feel constrained by the styles/layout that I've built here. This is a great time to show off your design and development sensibilities and skills! We'll be accepting submissions until January 15.</p>
-			<span id="general">
+			</div>
+
+			<button class=".btn">Show/Hide Instructions</button>
+
 		</section>
 		
 		<span class="anchor" id="general"></span>
@@ -41,7 +45,7 @@
 				<li>What do you hope to achieve through this internship?</li>
 
 					<div class="answer">
-					<p>I look forward to building real-world projects. I want to take my skills to the next level to become a great front-end developer. Whether it be through New Kind or another agency, I do hope to land a full-time Jr. Front-End Developer position afterwards.</p>
+					<p>I look forward to building real-world projects. I want to take my skills to the next level to become a great front-end developer. Whether it be through New Kind or another agency, I hope to land a full-time Jr. Front-End Developer position afterwards.</p>
 					</div>
 
 				<li>Are there particular skills or technologies you'd like to learn or work with?</li>
@@ -70,7 +74,7 @@
 				<li>Explain how design and development intersect. What role do you see a developer playing in the design process?</li>
 
 					<div class="answer">
-					<p>Design is an important component of any website. It's easy for design and development to blend, as the front-end developer is implementing the design. There are going to considerations that are better understood from a design standpoint than from a development perspective, and vice versa.</p>
+					<p>Design is an important component of any website. It's easy for design and development to blend, as the front-end developer is implementing the design. There are going to be considerations that are better understood from a design standpoint than from a development perspective, and vice versa.</p>
 					<p>The role of the developer in the design process is likely going to depend on the needs of the team and project. For smaller teams, it probably makes sense for the developer and designer to collaborate more so than in large companies with separate departments.</p>
 					<p>From my perspective, the developer's main obligation is to give feedback on the feasibility of a design. If aspects of a design are going to cause problems in adhering to code standards and/or cross-browser compatibility, the developer should definitely mention this and suggest alternatives.</p>
 					<p>Design isn't always a linear process, in which the design is completely created up front and then the developer implements it. I can see how the design could end up changing due to communication between the designer and developer.</p>
@@ -80,7 +84,7 @@
 				<li>Describe how grids are useful, and how you generally go about using them, or implementing them.</li>
 
 					<div class="answer">
-					<p>Grids provide a reusable CSS structure for implementing the layout of elements on a webpage. In a grid system, the page is divided into columns contained in rows. By attaching a column class to an html element (usually a div), you can specify how much that element spans across the page. For instance, in a 12-column grid, a class such as "12-col" would indicate that a div should span across the entire row. A class of "4-col" would indicate that the div should span across ⅓ of the page.</p>
+					<p>Grids provide a reusable CSS structure for implementing the layout of elements on a webpage. In a grid system, the page is divided into columns contained in rows. By attaching a column class to an html element (usually a div), you can specify how much that element spans across the page. For instance, in a 12-column grid, a class such as "12-col" would indicate that a div should span across the entire row. A class of "4-col" would indicate that the div should span across 1/3 of the page.</p>
 					<p>Rows can be nested within rows to provide further containers for columns. For example, you could have a row with two 6-column divs. If you want to evenly display two content boxes within one of those divs, you would add another row with two 6-column divs.</p>
 					<p>Grids make positioning elements on a page fast and easy. Additionally, grids are great for responsive design. By utilizing percentages on columns, the columns will grow larger or smaller depending on screen size.</p>
 					</div>
@@ -113,25 +117,30 @@
 
 					<p>I've built three different websites using the X theme in order to quickly launch websites for a few clients. This theme provides a WYSIWIG editor, but has a pretty steep learning curve. It allowed me a lot of control over the design and let me produce professional, quality websites in a short period of time. I applied child themes to these websites, as well.</p>
 
-					<p>For my own website, elepalmer.com, I used Advanced Custom Post Types and Custom Post Type UI to create my portfolio. This required building out page-portfolio.php and single-portfolio.php for my website's child theme.</p>
+					<p>For my <a href="http://www.elepalmer.com/">personal website</a>, I used Advanced Custom Post Types and Custom Post Type UI to create my portfolio. This required building out page-portfolio.php and single-portfolio.php for my website's child theme.</p>
 					</div>
 
 				<li>Is this your first time using version control? If not, tell us about other times you've used it, and which technologies.</li>
 
 					<div class="answer">
-					<p>I have used Git for almost all of my projects, with the exception of Wordpress websites. I try to remember to commit after implementing important features to any project. Git really came in handy when I was creating a resource guide using AJAX to call a JSON file. I realized I had just been attaching table rows to the page instead of separate tables for each category, resulting in one continuous table for all my information. Fortunately, I was able to just "checkout" to my last commit.</p>
+					<p>I have used Git for almost all of my projects, with the exception of Wordpress websites. I try to remember to commit after implementing important features to any project. Git really came in handy when I was creating a <a href="http://quennc.com/resources.html">resource guide</a> using AJAX to call a JSON file. I realized I had just been attaching table rows to the page instead of separate tables for each category, resulting in one continuous table for all my information. Fortunately, I was able to just "checkout" to my last commit.</p>
 					</div>
 
 				<li>Do you have experience with CSS pre-processors? Which one do you prefer and why?</li>
-
+					
 				<div class="answer">
+					<p>Using a CSS pre-processor has been on my list of things to learn for awhile now. I've never used one before, so I decided to take this questionnaire as an opportunity to learn Sass. I had a lot of fun playing around with variables and mixins. I can see how this would speed up development time. I'll be using Sass again!
+					</p>
 				</div>
 
 				<li>What is your comfort level with responsive design? Have you done any mobile-first projects before? Tell us about what you know.</li>
 					<div class="answer">
 					<p>I try to keep responsive design in mind for every project. At its simplest, I've made sure my websites used percentage-based layouts. For most projects, I've implemented media queries and break points so that the content spread out at larger screen sizes, but every div was contained to its own row on mobile devices.</p>
 
-					<p>Images are another important consideration in responsive design. Displaying the same large images for all screen sizes adds unnecessarily to load time. For PhoebeSnowTribute.com, my client provided several images they wanted featured. I used PictureFill.js so that the images displayed would differ depending on the screen size.</p>
+					<p>Images are another important consideration in responsive design. Displaying the same large images for all screen sizes adds unnecessarily to load time. For <a href="http://phoebesnowtribute.com/">A Tribute to Phoebe Snow</a>, my client provided several images they wanted featured. I used srcset and PictureFill.js so that the images displayed would differ depending on the screen size.</p>
+
+					<p>When I was building a Wordpress website for a <a href="http://www.northstarlgbtcc.com/">community center</a>, I did sketch up wireframes from a mobile-first perspective. Even though I ended up picking out a theme to use, keeping mobile-first in mind allowed me to focus on the most essential content for the main page. Although I have not always designed this way, I understand the benefits of mobile-first design. Namely, it allows you to focus on what is most important before enhancing functionality. 
+					</p>
 					</div>
 
 				<li>What books or blogs do you like to read, people you follow on twitter, etc. to keep up with the latest trends in front-end development?</li>
@@ -167,18 +176,41 @@
 
 					<p>The advantage of progressive enhancement is that in the initial product, you have already provided a website that will be pleasant for all users. Newer browsers may have additional features, but this will be "icing on the cake", so to speak. Although this requires more planning up front, there won't be any need to alter the original code when new technologies are released. It also ensures that there is one project that is kept up to date, rather than different versions of the same product built for various scenarios. With progressive enhancement, a team can "release early, release often" and focus on building enhancements instead of fixing edge cases.</p>
 					</div>
+
 			</ol>
 
 			<a href="#">Back to Top</a>
 
 		</section>
 
+		<span></span>
+
 		<section>
 			<h2>What else?</h2>
 
 			<p>Tell us more about yourself. What would you like for us to know? Feel free to tack on whatever you'd like here, build out a digital resume, or whatever! It's up to you!</p>
 
-			<div class="answer">
+			<div id="extra">
+				<p>Thank you for your consideration! Please see my contact information and a partial portfolio below.</p>
+				<ul class="contact">
+					<li><h3>Eleanor Palmer</h3></li>
+					<li><a href="" class="social-media-phone">Phone</a> 336-782-5516</li>
+					<li><a href="mailto:ecpalmer21@gmail.com" class="social-media-email">E-mail</a> ecpalmer21@gmail.com</li>
+					<li><a href="http://www.elepalmer.com" class="social-media-home">Website</a> elepalmer.com</li>
+					<li><a href="http://linkedin.com/in/eleanorpalmer" class="social-media-linkedin">LinkedIn</a> linkedin.com/in/eleanorpalmer</li>
+				</ul>
+				<ul class="portfolio">
+					<li>
+						<a href="http://www.elepalmer.com/portfolio/resource-guide/"><img src="images/resourceguide-small.png"></a>
+					</li>
+					<li>
+						<a href="http://www.elepalmer.com/portfolio/object-oriented-javascript-quiz/"><img src="images/JSQuiz-small.png"></a>
+					</li>
+					<li>
+						<a href="http://www.elepalmer.com/portfolio/phoebe-snow-tribute/"><img src="images/pstribute-small.png"></a>
+					</li>
+				</ul>
+				<p>Check out my <a href="http://www.elepalmer.com/portfolio">website's portfolio</a> to see more of my work.</p>
 			</div>
 			
 			<a href="#">Back to Top</a>
